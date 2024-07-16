@@ -10,7 +10,12 @@
     <meta name="author" content="Slavo Janowski" />
 
     <!-- Favicon and Touch Icons -->
-    <link rel="icon" type="image/png" sizes="512x512" href="" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/best-quality.png"
+    />
 
     <!-- Google Fonts Files -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,32 +30,250 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header id="header" class="header">
+    <!-- Commit head settings -->
+    <header id="Header" class="header">
       <div class="container">
         <section class="site-title">
-          <h1>BestShop</h1>
+          <h1><a href="#Banner">BestShop</a></h1>
         </section>
+        <!-- Commit site title -->
         <nav>
           <ul class="nav-list">
-            <li><a href="#why-us">Why us</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a href="#prices">Prices</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#Why-us">Why us</a></li>
+            <li><a href="#Benefits">Benefits</a></li>
+            <li><a href="#Prices">Prices</a></li>
+            <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
+    <!-- Commit nav list -->
 
-    <main id="main" class="main">
-      <section id="why-us" class="banner">
+    <main id="Main" class="main">
+      <section id="Banner" class="banner">
         <div class="container">
-          <div class="banner-headline">Sell More!</div>
-          <div class="banner-subline">
-            Open shop on our platform and increase your sales
+          <div class="banner-headline">
+            <h1>Sell More!</h1>
           </div>
-          <div class="button banner-btn"><a href="#">Open your shop</a></div>
+          <div class="banner-subline">
+            <p>Open shop on our platform and increase your sales</p>
+          </div>
+          <div class="button"><a href="#">Open your shop</a></div>
         </div>
       </section>
+      <!-- Commit banner -->
+
+      <section id="Why-us" class="wu-stats">
+        <div class="container">
+          <h2>The most popular sales platform in country</h2>
+          <div class="wu-row">
+            <div class="wu-column">
+              <div class="wu-icon">
+                <img src="/assets/Person.svg" alt="daily entries" />
+              </div>
+              <div class="wu-number">100000+</div>
+              <div class="wu-title">daily entries</div>
+            </div>
+            <div class="wu-column">
+              <div class="wu-icon">
+                <img src="/assets/Eye.svg" alt="seen products every day" />
+              </div>
+              <div class="wu-number">2000000+</div>
+              <div class="wu-title">
+                seen products<br />
+                every day
+              </div>
+            </div>
+            <div class="wu-column">
+              <div class="wu-icon">
+                <img src="/assets/Catalog.svg" alt="added posts daily" />
+              </div>
+              <div class="wu-number">10000+</div>
+              <div class="wu-title">
+                added posts<br />
+                daily
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Commit colums 'Why us' -->
+
+      <section id="Benefits" class="benefits">
+        <div class="container">
+          <div class="row row-1">
+            <div class="column column-left">
+              <h2>Be always first</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+              <span></span>
+            </div>
+            <div class="column column-right">
+              <div class="benefits-img">
+                <img src="/assets/Macbook.png" alt="Macbook" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-2">
+            <div class="column column-left">
+              <div class="benefits-img">
+                <img src="/assets/iPhone.png" alt="iPhone" />
+              </div>
+            </div>
+            <div class="column column-right">
+              <h2>
+                Your shop is<br />
+                where you are!
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="row row-3">
+            <div class="column column-left">
+              <h2>
+                Increase recognition<br />
+                your brand!
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+              <span></span>
+            </div>
+            <div class="column column-right">
+              <div class="benefits-img">
+                <img src="/assets/Trumpet.png" alt="Macbook" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Prices" class="pricing">
+        <div class="container">
+          <h2>Pricing</h2>
+          <div class="row">
+            <div class="column column-1">
+              <div class="pricing-name">Basic</div>
+              <div class="pricing-price">$0</div>
+              <ul class="pricing-list">
+                <li class="pricing-in">100 MB HDD</li>
+                <li class="pricing-in">1 Subdomain</li>
+                <li class="pricing-in">2 E-mails</li>
+                <li class="pricing-out">Two years licence</li>
+                <li class="pricing-out">Full support</li>
+              </ul>
+              <div class="button"><a href="#">Begin</a></div>
+            </div>
+
+            <div class="column column-2">
+              <div class="pricing-name">Professional</div>
+              <div class="pricing-price">$25</div>
+              <div class="subline">Limited offer</div>
+              <ul class="pricing-list">
+                <li class="pricing-in">500 MB HDD</li>
+                <li class="pricing-in">2 Subdomains</li>
+                <li class="pricing-in">5 E-mails</li>
+                <li class="pricing-in">One years licence</li>
+                <li class="pricing-out">Full support</li>
+              </ul>
+              <div class="button"><a href="#">Begin</a></div>
+            </div>
+            <div class="column column-3">
+              <div class="pricing-name">Premium</div>
+              <div class="pricing-price">$60</div>
+              <div class="subline">Limited offer</div>
+              <ul class="pricing-list">
+                <li class="pricing-in">2 GB HDD</li>
+                <li class="pricing-in">5 Subdomains</li>
+                <li class="pricing-in">20 E-mails</li>
+                <li class="pricing-in">Two years license</li>
+                <li class="pricing-in">Full support</li>
+              </ul>
+              <div class="button"><a href="#">Begin</a></div>
+            </div>
+          </div>
+        </div> 
+      </section>
+      <section id="Contact" class="contact">
+        <div class="container">
+          <div class="column column-left">
+            <div class="column-head-text">
+              <h2>Any questions?</h2>
+              <p>Leave your email address or call us!</p>
+            </div>
+            <div class="column-contact-detail">
+              <div class="email-contact">
+                <img src="assets/Mail Icon.svg" alt="Mail contact" class="contact-icon">
+                 <a href="#">info@bestshop.xyz</a>
+              </div>
+              <div class="phone-contact">
+                <img src="assets/Phone Icon.svg" alt="Phone contact" class="contact-icon">
+                <a href="#">info@bestshop.xyz</a>
+              </div>
+            </div>
+          </div>
+          <div class="column column-right">
+            <div class="contact-form">
+              <form action="" method="">
+                <div class="contact-name">
+                  <label for="">NAME</label>
+                  <input type="text" name="your-name">
+                </div>
+                <div class="contact-email">
+                  <label for="">EMAIL</label>
+                  <input type="email" name="your-email" id="">
+                </div>
+                <div class="form-consent">
+                  <label class="form-checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox"></span>
+                    <p class="consent-text"> I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive) </p>
+                  </label>
+                </div>
+
+                <!-- <div class="contact-consent">
+                    <input type="checkbox" name="consent" id="">
+                    <span class="input-span"></span>
+                  <label for="">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                </div> -->
+
+                <div class="button submit-bttn">
+                  <input type="submit" value="Send">
+                </div>
+              </form>
+            </div>
+          </div>
+        
+      </div>
+      </section>
     </main>
+    <footer id=""Footer" class="footer">
+      <div class="container">
+        <div class="footer-info">
+          <div class="footer-title">BestShop</div>
+          <div class="footer-copyright">© 2019 BestShop LTD, All Rights Reserved</div>
+        </div>
+        <div class="footer-social-icons">
+          <div class="twitter">
+            <a href="#" class=""><img src="assets/Twitter.svg" alt="Twitter" class=""></a>
+          </div>
+        <div class="facebook">
+            <a href="#" class=""><img src="assets/Facebook.svg" alt="Facebok" class=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

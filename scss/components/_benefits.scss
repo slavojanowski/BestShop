@@ -1,0 +1,314 @@
+/*------------- Benefits section ------------------*/
+// .benefits {
+//     padding: 105px 0 100px;
+//     background-color: #f7f7f7;
+//   }
+//   .benefits .container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .benefits .row {
+//     max-width: 1124px;
+//     display: flex;
+//   }
+//   .benefits .row-1,
+//   .benefits .row-2,
+//   .benefits .row-3 .column-left {
+//     background-color: $color-white;
+//     border-radius: 5px;
+//     border: 1px solid #e8e9ed;
+//   }
+//   .benefits .row-1 {
+//     padding: 35px 110px 38px 35px;
+//     margin-bottom: 37px;
+//   }
+//   .benefits .row-1 .column-left {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     padding-right: 169px;
+//   }
+//   .benefits h2 {
+//     margin-bottom: 30px;
+//   }
+//   .benefits p {
+//     color: $color-black;
+//     font-size: 16px;
+//     line-height: 22px;
+//     font-weight: normal;
+//     margin-bottom: 50px;
+//   }
+//   .benefits .row-1 span {
+//     display: block;
+//     height: 4px;
+//     width: 328px;
+//     background-color: $color-redish;
+//   }
+//   .benefits .row-1 .column-right img {
+//     width: 386px;
+//     height: auto;
+//     position: relative;
+//     z-index: 1;
+//     margin-top: 70px;
+//   }
+//   .benefits .row-1 .benefits-img::before {
+//     content: "";
+//     width: 180px;
+//     height: 180px;
+//     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+//     background-color: $color-redish;
+//     border-radius: 41px;
+//     display: inline-block;
+//     position: absolute;
+//     margin-left: 210px;
+//     margin-top: 35px;
+//   }
+//   .benefits .row-2 {
+//     padding: 12px 20px 38px 70px;
+//     margin-bottom: 37px;
+//   }
+//   .benefits .row-2 .benefits-img img {
+//     width: 426px;
+//     height: auto;
+//     position: relative;
+//     z-index: 1;
+//     margin-top: 17px;
+//   }
+//   .benefits .row-2 .benefits-img::before {
+//     content: "";
+//     width: 320px;
+//     height: 320px;
+//     border-radius: 50%;
+//     background-color: $color-primary;
+//     display: inline-block;
+//     position: absolute;
+//   }
+//   .benefits .row-2 span {
+//     display: block;
+//     height: 4px;
+//     width: 328px;
+//     background-color: $color-primary;
+//   }
+//   .benefits .row-2 .column-right {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     padding-left: 192px;
+//   }
+
+//   .benefits .row-3 .column-left {
+//     padding: 70px 35px;
+//     background-color: $color-white;
+//   }
+//   .benefits .row-3 .benefits-img img {
+//     width: 296px;
+//     height: auto;
+//   }
+//   .benefits .row-3 .column-right {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $color-green;
+//     border-radius: 5px;
+//     border: 1px solid #e8e9ed;
+//     margin-left: 60px;
+//     padding: 98px 82px 64px 62px;
+//   }
+//   .benefits .row-3 span {
+//     display: block;
+//     height: 4px;
+//     width: 328px;
+//     background-color: $color-green;
+//   }
+
+/* --------- KOPIA DO KOMPESJI SCSS -------------*/
+
+.benefits {
+  background-color: #f7f7f7;
+  .container {
+    padding: 105px 100px 100px;
+    @include flexbox-container($flex-direction: column);
+    .row {
+      @include flexbox-container($flex-direction: column);
+      margin-bottom: 37px;
+      @include breakpoints(medium) {
+        @include flexbox-container($justify-content: space-between);
+      }
+    }
+    .row-1 {
+      @include benefits-row();
+      @include flexbox-container($flex-direction: column-reverse);
+      @include breakpoints(medium) {
+        @include flexbox-container($flex-direction: column);
+      }
+      .column-left {
+        width: 100%;
+        margin-top: 45px;
+        @include flexbox-container($flex-direction: column);
+        @include breakpoints(medium) {
+          @include flexbox-container($flex-direction: column, $align-items: flex-start);
+          width: 50%;
+          margin-top: 0;
+        }
+      }
+      .column-right {
+        @include flexbox-container();
+        width: 100%;
+        @include breakpoints(medium) {
+          width: 40%;
+        }
+        img {
+          width: 386px;
+          height: auto;
+          position: relative;
+          z-index: 1;
+          margin-top: 70px;
+        }
+      }
+      span {
+        display: block;
+        height: 4px;
+        width: 328px;
+        background-color: $color-redish;
+      }
+      .benefits-img {
+        &::before {
+          content: "";
+          width: 180px;
+          height: 180px;
+          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+          background-color: $color-redish;
+          border-radius: 41px;
+          display: inline-block;
+          position: absolute;
+          margin-left: 210px;
+          margin-top: 35px;
+        }
+      }
+    }
+    .row-2 {
+      @include benefits-row();
+      // padding: 60px;
+      margin-bottom: 37px;
+      .column-left {
+        @include flexbox-container();
+        width: 100%;
+        @include breakpoints(medium) {
+          width: 40%;
+        }
+      }
+      .column-right {
+        width: 100%;
+        @include flexbox-container($flex-direction: column);
+        margin-top: 50px;
+        @include breakpoints(medium) {
+          @include flexbox-container(
+            $flex-direction: column,
+            $align-items: flex-start
+          );
+          width: 50%;
+          margin-top: 0;
+        }
+        span {
+          display: block;
+          height: 4px;
+          width: 328px;
+          background-color: $color-primary;
+        }
+      }
+      .benefits-img {
+        &::before {
+          content: "";
+          width: 320px;
+          height: 320px;
+          border-radius: 50%;
+          background-color: $color-primary;
+          display: inline-block;
+          position: absolute;
+        }
+        img {
+          width: 340px;
+          height: auto;
+          position: relative;
+          z-index: 1;
+          margin-top: 30px;
+          margin-left: 30px;
+        }
+      }
+    }
+    .row-3 {
+      @include flexbox-container(
+        $align-items: stretch,
+        $flex-direction: column
+      );
+      @include breakpoints(medium) {
+        @include flexbox-container($justify-content: space-between, $align-items: stretch);
+      }
+      .column-left {
+        @include benefits-row();
+        @include flexbox-container($flex-direction: column);
+        @include benefits-border-radius(5px, 5px, 0, 0);
+        width: 100%;
+        // background-color: $color-white;
+        @include breakpoints(medium) {
+          @include flexbox-container($flex-direction: column, $align-items: flex-start);
+          @include benefits-border-radius();
+          width: 60%;
+        }
+      }
+      span {
+        display: block;
+        height: 4px;
+        width: 328px;
+        background-color: $color-green;
+      }
+      .column-right {
+        @include flexbox-container();
+        @include benefits-border-radius(0, 0, 5px, 5px);
+        width: 100%;
+        background-color: $color-green;
+        border: 1px solid #e8e9ed;
+        @include breakpoints(medium) {
+          @include benefits-border-radius();
+          width: 35%;
+        }
+      }
+      .benefits-img {
+        img {
+          width: 296px;
+          height: auto;
+          margin-top: 60px;
+          @include breakpoints(medium) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+      @include breakpoints(medium) {
+        text-align: left;
+      }
+      br {
+        display: none;
+        @include breakpoints(medium) {
+          display: block;
+        }
+      }
+    }
+    p {
+      color: $color-black;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: normal;
+      margin-bottom: 50px;
+      text-align: center;
+      @include breakpoints(medium) {
+        text-align: left;
+      }
+    }
+  }
+}

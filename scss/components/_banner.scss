@@ -1,0 +1,52 @@
+.banner {
+  background-image: url(/assets/Background.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  // background-size: 220%;
+  height: calc(100vh - $header-height);
+  @include box-shadow($left: -5px, $blur: 80px, $inset: inset);
+  @include breakpoints(medium) {
+    height: auto;
+    background-size: auto;
+  }
+  .container {
+    @include flexbox-container($flex-direction: column);
+    .banner-headline {
+      margin-bottom: 20px;
+      font-size: 49px;
+      line-height: 57px;
+      color: $color-black;
+      font-weight: normal;
+      font-family: $font-family-secondary;
+      @include breakpoints(medium) {
+        margin-top: 150px;
+      }
+    }
+    .banner-subline {
+      margin-bottom: 38px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: normal;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      background-color: $color-primary;
+      margin-bottom: 250px;
+      padding: 22px 157px 23px;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      text-decoration: none;
+      font-weight: bold;
+      @include box-shadow($top: 5px, $left: 10px, $blur: 14px, $color: $color-primary-shadow);
+      @include breakpoints(medium) {
+        margin-bottom: 508px;
+      }
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}

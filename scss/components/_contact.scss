@@ -1,0 +1,256 @@
+/*------------- Contact section ------------------*/
+// .contact {
+//     padding-bottom: 59px;
+//   }
+//   .contact .container {
+//     display: flex;
+//     flex-direction: row;
+//     padding: 0 10%;
+//   }
+//   .contact .column-left {
+//     width: 50%;
+//   }
+//   .contact .column-right {
+//     width: 50%;
+//   }
+//   .contact .column-contact-detail {
+//     display: flex;
+//     flex-direction: row;
+//   }
+//   .contact .column-head-text h2 {
+//     font-size: 49px;
+//     line-height: 57px;
+//     font-weight: normal;
+//     color: $color-black;
+//     font-family: $font-family-secondary;
+//     margin-bottom: 22px;
+//   }
+//   .contact .column-head-text p {
+//     font-size: 16px;
+//     line-height: 22px;
+//     font-weight: normal;
+//     color: $color-black;
+//     margin-bottom: 42px;
+//   }
+//   .contact .column-contact-detail img {
+//     width: 27px;
+//     height: 27px;
+//     margin-right: 10px;
+//   }
+//   .contact .column-contact-detail a {
+//     font-size: 16px;
+//     line-height: 22px;
+//     font-weight: 600;
+//     color: $color-grey;
+//   }
+//   .contact .column-contact-detail .email-contact {
+//     margin-right: 20px;
+//   }
+//   .contact .contact-name label,
+//   .contact .contact-email label {
+//     display: block;
+//     font-size: 11px;
+//     line-height: 15px;
+//     font-weight: bold;
+//     letter-spacing: 3.28px;
+//     color: $color-primary;
+//   }
+//   .contact .contact-name input,
+//   .contact .contact-email input {
+//     line-height: 40px;
+//     border-width: 0 0 1px 0;
+//     width: 100%;
+//   }
+//   .contact-email {
+//     margin-top: 40px;
+//   }
+
+//   /*-------------------------*/
+//   .form-consent {
+//     margin-top: 30px;
+//   }
+//   .form-checkbox {
+//     cursor: pointer;
+//     display: block;
+//     font-size: 1.375rem;
+//     margin-bottom: 12px;
+//     padding-left: 35px;
+//     position: relative;
+//   }
+//   .form-checkbox input {
+//     cursor: pointer;
+//     height: 0;
+//     opacity: 0;
+//     position: absolute;
+//     width: 0;
+//   }
+//   .form-checkbox .checkbox {
+//     background-color: $color-white;
+//     border: 1px solid $color-grey;
+//     border-radius: 4px;
+//     height: 25px;
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+//     width: 25px;
+//   }
+//   .form-checkbox .consent-text {
+//     color: $color-grey;
+//     font-size: .75rem;
+//     line-height: 17px;
+//     margin: 0 10px;
+//   }
+//   .form-checkbox input:checked ~ .checkbox {
+//     background-image: url(/assets/Checkmark.svg);
+//     background-position: 50%;
+//     background-repeat: no-repeat;
+//     background-size: 50%;
+//   }
+
+//   .contact .submit-bttn input[type="submit"] {
+//     display: inline-block;
+//     padding: 20px 97px;
+//     margin-top: 20px;
+//     box-shadow: 5px 10px 14px #07ace629;
+//     border-radius: 35px;
+//     background-color: $color-primary;
+//     -webkit-appearance: none;
+//     border: 0;
+//     color: $color-white;
+//   }
+//   .contact .submit-bttn {
+//     text-align: right;
+//   }
+
+/* --------- KOPIA DO KOMPESJI SCSS -------------*/
+
+.contact {
+  .container {
+    @include flexbox-container($flex-direction: column);
+    padding: 0 100px 60px 100px;
+    @include breakpoints(medium) {
+      @include flexbox-container($align-items: flex-start);
+    }
+  }
+  .column-left {
+    width: 100%;
+    margin-bottom: 100px;
+    @include breakpoints(medium) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    .column-contact-detail {
+      display: flex;
+      flex-direction: row;
+    }
+    .column-head-text {
+      h2 {
+        font-size: 49px;
+        line-height: 57px;
+        font-weight: normal;
+        color: $color-black;
+        font-family: $font-family-secondary;
+        margin-bottom: 22px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: normal;
+        color: $color-black;
+        margin-bottom: 42px;
+      }
+    }
+    .column-contact-detail {
+      img {
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+      }
+      a {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        color: $color-grey;
+      }
+      .email-contact {
+        margin-right: 20px;
+      }
+    }
+  }
+  .column-right {
+    width: 100%;
+    @include breakpoints(medium) {
+      width: 50%;
+    }
+    .contact-name {
+      label {
+        @include contact-form-label();
+      }
+      input {
+        @include contact-form-input();
+      }
+    }
+    .contact-email {
+      margin-top: 40px;
+      label {
+        @include contact-form-label();
+      }
+      input {
+        @include contact-form-input();
+      }
+    }
+    .form-consent {
+      margin-top: 30px;
+      .form-checkbox {
+        cursor: pointer;
+        display: block;
+        font-size: 1.375rem;
+        margin-bottom: 12px;
+        padding-left: 35px;
+        position: relative;
+        input {
+          height: 0;
+          opacity: 0;
+          position: absolute;
+          width: 0;
+          &:checked ~ .checkbox {
+            background-image: url(/assets/Checkmark.svg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 50%;
+          }
+        }
+        .checkbox {
+          background-color: $color-white;
+          border: 1px solid $color-grey;
+          border-radius: 4px;
+          height: 25px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 25px;
+        }
+        .consent-text {
+          color: $color-grey;
+          font-size: 0.75rem;
+          line-height: 17px;
+          margin: 0 10px;
+        }
+      }
+    }
+    .submit-bttn {
+      text-align: right;
+      input[type="submit"] {
+        display: inline-block;
+        padding: 20px 97px;
+        margin-top: 20px;
+        box-shadow: 5px 10px 14px #07ace629;
+        border-radius: 35px;
+        background-color: $color-primary;
+        -webkit-appearance: none;
+        border: 0;
+        color: $color-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+/*------------- Why us section ------------------*/
+// .wu-stats {
+//     padding-bottom: 120px;
+//   }
+//   .wu-stats .container {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+//   .wu-stats h2 {
+//     padding: 100px 0;
+//   }
+//   .wu-row {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//   }
+//   .wu-column {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 0 90px;
+//   }
+//   .wu-icon {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 63px;
+//   }
+//   .wu-icon::before {
+//     content: "";
+//     width: 63px;
+//     height: 63px;
+//     background-color: $color-redish;
+//     display: inline-block;
+//     border-radius: 50%;
+//     position: absolute;
+//   }
+//   .wu-column:nth-child(2) .wu-icon::before {
+//     background-color: $color-primary;
+//   }
+//   .wu-column:last-child .wu-icon::before {
+//     background-color: $color-green;
+//   }
+//   .wu-icon img {
+//     position: relative;
+//     margin-left: 45px;
+//   }
+//   .wu-number {
+//     padding: 15px 0 20px;
+//     font-size: 20px;
+//     line-height: 24px;
+//     font-weight: 800;
+//     letter-spacing: 6px;
+//     font-family: $font-family-secondary;
+//   }
+//   .wu-title {
+//     font-size: 16px;
+//     line-height: 19px;
+//     text-align: center;
+//     font-weight: normal;
+//     font-family: $font-family-secondary;
+//     color: $color-grey;
+//   }
+
+/* --------- KOPIA DO KOMPESJI SCSS -------------*/
+
+.wu-stats {
+  padding-bottom: 60px;
+  .container {
+    @include flexbox-container($flex-direction: column);
+    h2 {
+      padding: 100px 5%;
+      text-align: center;
+    }
+    .wu-row {
+      @include flexbox-container($flex-direction: column);
+      @include breakpoints(medium) {
+        @include flexbox-container();
+      }
+      .wu-column {
+        padding: 0 90px;
+        margin-bottom: 50px;
+        @include flexbox-container($flex-direction: column);
+
+        .wu-icon {
+          position: relative;
+          height: 63px;
+          @include flexbox-container();
+          &::before {
+            @include statistics-icon($color-redish);
+          }
+          img {
+            position: relative;
+            margin-left: 45px;
+          }
+        }
+        &:nth-child(2) .wu-icon::before {
+          @include statistics-icon($color-primary);
+        }
+        &:last-child .wu-icon::before {
+          @include statistics-icon($color-green);
+        }
+        .wu-number {
+          padding: 15px 0 20px;
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 800;
+          letter-spacing: 6px;
+          font-family: $font-family-secondary;
+        }
+        .wu-title {
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          font-weight: normal;
+          font-family: $font-family-secondary;
+          color: $color-grey;
+        }
+      }
+    }
+  }
+}

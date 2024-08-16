@@ -1,0 +1,23 @@
+$color-primary: #08a6e4;
+$color-primary-shadow: rgba(7, 172, 230, 0.16);
+$color-redish: #fb3b64;
+$color-green: #55dfb4;
+$color-black: #000000;
+$color-grey: #a5a5a5;
+$color-light-grey: #f7f7f7;
+$color-white: #ffffff;
+$font-family-primary: "Open Sans", sans-serif;
+$font-family-secondary: "Raleway", sans-serif;
+
+$header-height: 70px;
+
+%menu-button {
+  content: "";
+  display: block;
+  background-color: $color-primary;
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  transition: transform 900ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}

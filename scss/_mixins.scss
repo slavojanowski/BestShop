@@ -1,0 +1,133 @@
+@mixin breakpoints($point) {
+  @if $point == medium {
+    @media (min-width: 1352px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox-container(
+  $flex-direction: row,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin box-shadow(
+  $top: 0,
+  $left: 3px,
+  $blur: 6px,
+  $color: rgba(0, 0, 0, 0.29),
+  $inset: false
+) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin price-button-bg($bg-color) {
+  background: $bg-color;
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  font-size: 13px;
+  line-height: 1em;
+  font-weight: bold;
+  padding: 16px 57px;
+  border-radius: 23px;
+  color: $color-white;
+  a {
+    color: $color-white;
+  }
+  &:hover {
+    background: darken($bg-color, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg-color, 25%);
+  }
+}
+
+@mixin price-column($column-border, $column-width) {
+  border: $column-border;
+  width: calc($column-width * 2);
+  text-align: center;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  margin-bottom: 50px;
+  @include breakpoints(medium) {
+    width: $column-width;
+  }
+}
+
+@mixin price-availability($bg-img) {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: $bg-img;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@mixin statistics-icon($icon-bg-color) {
+  content: "";
+  width: 63px;
+  height: 63px;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $icon-bg-color;
+}
+
+@mixin benefits-border-radius(
+  $border-top-left-radius: 5px,
+  $border-top-right-radius: 5px,
+  $border-bottom-right-radius: 5px,
+  $border-bottom-left-radius: 5px
+) {
+  border-top-left-radius: $border-top-left-radius;
+  border-top-right-radius: $border-top-right-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+  border-bottom-left-radius: $border-bottom-left-radius;
+}
+
+@mixin benefits-row() {
+  background-color: $color-white;
+  @include benefits-border-radius();
+  border: 1px solid #e8e9ed;
+  padding: 60px;
+}
+
+@mixin contact-form-label() {
+  display: block;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: bold;
+  letter-spacing: 3.28px;
+  color: $color-primary;
+}
+
+@mixin contact-form-input () {
+  line-height: 40px;
+  border-width: 0 0 1px 0;
+  width: 100%;
+}

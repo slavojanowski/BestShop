@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+  }
+  // * {
+  //   box-sizing: border-box;
+  // }
+  body {
+    font-family: $font-family-primary;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    color: $color-black;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: normal;
+    font-family: $font-family-secondary;
+  }
+  .container {
+    width: 1352px;
+  }
+  .header,
+  .banner,
+  .wu-stats,
+  .benefits,
+  .pricing,
+  .contact,
+  .footer {
+    display: flex;
+    justify-content: center;
+  }

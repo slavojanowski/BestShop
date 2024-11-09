@@ -33,11 +33,11 @@
       display: inline-block;
       background-color: $color-primary;
       margin-bottom: 250px;
-      padding: 22px 157px 23px;
+      padding: 20px 10%;
       border-radius: 40px;
       text-align: center;
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 1rem;
+      line-height: 1rem;
       text-decoration: none;
       font-weight: bold;
       @include box-shadow($top: 5px, $left: 10px, $blur: 14px, $color: $color-primary-shadow);
